@@ -3,7 +3,7 @@
  */
 
 // รูปสินค้า — แมปรูปให้ตรงกับของ (จากโฟลเดอร์ images)
-const IMG = (n) => 'img' + n + '.png';
+const IMG = (n) => 'images/img' + n + '.png';
 
 // เมนูจาก menu.pdf + รูปตรงกับของ
 const products = {
