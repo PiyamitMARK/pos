@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แอดมิน — ร้านชากาแฟ</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="admin-app">
+    <div id="loginScreen" class="screen">
+      <div class="login-box">
+        <h1 class="login-title">เข้าสู่ระบบแอดมิน</h1>
+        <p class="login-subtitle">ร้านชากาแฟ</p>
+        <form id="loginForm" class="login-form">
+          <label class="label" for="username">ชื่อผู้ใช้</label>
+          <input type="text" id="username" name="username" autocomplete="username" required>
+          <label class="label" for="password">รหัสผ่าน</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required>
+          <p id="loginError" class="login-error" aria-live="polite"></p>
+          <button type="submit" class="btn btn-primary btn-block">เข้าสู่ระบบ</button>
+        </form>
+        <a href="index.html" class="back-link">← กลับไป POS</a>
+      </div>
+    </div>
+
+    <div id="dashboardScreen" class="screen hidden">
+      <header class="admin-header">
+        <div class="admin-header-left">
+          <h1 class="admin-logo">แอดมิน</h1>
+          <span class="admin-user">Mixzaza</span>
+        </div>
+        <div class="admin-header-right">
+          <button type="button" class="btn btn-danger-outline" id="clearDataBtn">ล้างสินค้า</button>
+          <a href="index.html" class="btn btn-secondary">POS</a>
+          <button type="button" class="btn btn-secondary" id="logoutBtn">ออกจากระบบ</button>
+        </div>
+      </header>
+
+      <div class="modal" id="clearDataModal" aria-hidden="true">
+        <div class="modal-box">
+          <h3 class="modal-title">ล้างรายการสั่งซื้อทั้งหมด</h3>
+          <p class="modal-desc">กรอกรหัสเพื่อล้างข้อมูลรายการสั่งซื้อและรีเซ็ตหมายเลขออเดอร์</p>
+          <label class="label" for="clearDataCode">รหัส</label>
+          <input type="password" id="clearDataCode" class="modal-input" placeholder="ใส่รหัส" autocomplete="off">
+          <p id="clearDataError" class="login-error" aria-live="polite"></p>
+          <div class="modal-actions">
+            <button type="button" class="btn btn-secondary" id="clearDataCancel">ยกเลิก</button>
+            <button type="button" class="btn btn-danger" id="clearDataConfirm">ล้างข้อมูล</button>
+          </div>
+        </div>
+      </div>
+
+      <main class="admin-main">
+        <section class="daily-summary" id="dailySummary">
+          <h2 class="summary-title">สรุปยอดวันนี้</h2>
+          <div class="summary-cards">
+            <div class="summary-card">
+              <span class="summary-label">จำนวนออเดอร์ (จ่ายแล้ว)</span>
+              <span class="summary-value" id="todayOrderCount">0</span>
+            </div>
+            <div class="summary-card">
+              <span class="summary-label">ยอดรวมวันนี้</span>
+              <span class="summary-value" id="todayTotal">฿0.00</span>
+            </div>
+          </div>
+        </section>
+
+        <nav class="admin-tabs">
+          <button type="button" class="admin-tab active" data-tab="recent">รายการล่าสุด</button>
+          <button type="button" class="admin-tab" data-tab="history">ย้อนหลัง 1 เดือน</button>
+        </nav>
+
+        <div id="tabRecent" class="tab-panel">
+          <h2 class="section-title">รายการสั่งซื้อ</h2>
+          <p class="section-desc">กด "จ่ายแล้ว" เมื่อลูกค้าชำระเงินแล้ว</p>
+          <div id="ordersList" class="orders-list"></div>
+          <div id="ordersEmpty" class="orders-empty hidden">
+            <p>ยังไม่มีรายการสั่งซื้อ</p>
+            <a href="index.html">ไปที่ POS</a>
+          </div>
+        </div>
+
+        <div id="tabHistory" class="tab-panel hidden">
+          <h2 class="section-title">ย้อนหลัง 1 เดือน</h2>
+          <p class="section-desc">สรุปยอดแยกตามวัน (เฉพาะออเดอร์ที่จ่ายแล้ว)</p>
+          <div id="historyContent" class="history-content"></div>
+          <div id="historyEmpty" class="orders-empty hidden">
+            <p>ไม่มีข้อมูลย้อนหลัง</p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
