@@ -24,7 +24,7 @@ const products = {
     { id: 'thai-tea', name: 'ชาไทย', price: 30, image: IMG(1) },
     { id: 'green-tea', name: 'ชาเขียว', price: 30, image: IMG(10) },
     { id: 'black-tea', name: 'ชาดำเย็น', price: 30, image: IMG(5) },
-    { id: 'lemon-tea', name: 'ชามะนาว', price: 30, image: IMG(15) },
+    { id: 'lemon-tea', name: 'ชามะนาว', price: 30, image: IMG(13) },
   ],
   milk: [
     { id: 'pink-milk', name: 'นมชมพู', price: 35, image: IMG(14) },
