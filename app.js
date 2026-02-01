@@ -28,7 +28,7 @@ const products = {
   ],
   milk: [
     { id: 'pink-milk', name: 'นมชมพู', price: 35, image: IMG(14) },
-    { id: 'cocoa', name: 'โกโก้', price: 30, image: IMG(9) },
+    { id: 'cocoa', name: 'โกโก้', price: 45, image: IMG(9) },
   ],
   soda: [
     { id: 'red-lime-soda', name: 'แดงมะนาวโซดา', price: 30, image: IMG(23) },
