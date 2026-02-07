@@ -49,10 +49,16 @@ const products = {
     { id: 'mix-berry-yogurt', name: 'มิกซ์เบอร์รี่โยเกิร์ต', price: 30, image: IMG(20) },
   ],
 };
+const OPTIONS = {
+  temp: ["ร้อน", "เย็น", "ปั่น"],
+  sweet: ["ไม่หวาน", "หวานน้อย", "หวานปกติ", "หวานมาก"]
+};
 
 let cart = [];
 let orderNumber = 1001;
 let currentCategory = 'coffee';
+let selectedTemp = "เย็น";
+let selectedSweet = "หวานปกติ";
 
 // DOM
 const currentDateEl = document.getElementById('currentDate');
@@ -111,12 +117,27 @@ function renderProducts() {
 
 function addToCart({ id, name, price, image }) {
   const numPrice = parseFloat(price);
-  const existing = cart.find((i) => i.id === id && i.price === numPrice);
+
+  const existing = cart.find((i) =>
+    i.id === id &&
+    i.temp === selectedTemp &&
+    i.sweet === selectedSweet
+  );
+
   if (existing) {
     existing.qty += 1;
   } else {
-    cart.push({ id, name, price: numPrice, qty: 1, image: image || '' });
+    cart.push({
+      id,
+      name,
+      price: numPrice,
+      qty: 1,
+      image: image || '',
+      temp: selectedTemp,
+      sweet: selectedSweet
+    });
   }
+
   renderCart();
 }
 
