@@ -164,7 +164,12 @@ function renderCart() {
     li.innerHTML = `
       ${imgHtml}
       <div class="cart-item-info">
-        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-name">
+  ${item.name}
+  <div class="cart-item-options">
+    ${item.temp}, ${item.sweet}
+  </div>
+</div>
         <div class="cart-item-price">${formatMoney(item.price)} × ${item.qty}</div>
       </div>
       <div class="cart-item-qty">
