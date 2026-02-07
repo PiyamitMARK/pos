@@ -399,7 +399,6 @@ document.querySelectorAll(".temp-btn").forEach(btn => {
 
     selectedTemp = btn.dataset.temp;
 
-    updateSelectedItem();
 
   });
 
@@ -416,7 +415,6 @@ document.querySelectorAll(".sweet-btn").forEach(btn => {
 
     selectedSweet = btn.dataset.sweet;
 
-    updateSelectedItem();
 
   });
 
