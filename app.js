@@ -60,6 +60,16 @@ let currentCategory = 'coffee';
 let selectedTemp = "เย็น";
 let selectedSweet = "หวานปกติ";
 
+function setTemp(temp) {
+  selectedTemp = temp;
+  console.log("Temp =", temp);
+}
+
+function setSweet(sweet) {
+  selectedSweet = sweet;
+  console.log("Sweet =", sweet);
+}
+
 // DOM
 const currentDateEl = document.getElementById('currentDate');
 const orderNumberEl = document.getElementById('orderNumber');
