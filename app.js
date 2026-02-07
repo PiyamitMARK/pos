@@ -31,8 +31,8 @@ const products = {
     { id: 'cocoa', name: 'โกโก้', price: 45, image: IMG(9) },
   ],
   kaosoi: [
-    { id: 'soi2', name: 'ข้าวซอยหมู', price: 75, image: IMG(14) },
-    { id: 'soi1', name: 'ข้าวซอยไก่', price: 65, image: IMG(9) },
+    { id: 'soi2', name: 'ข้าวซอยหมู', price: 75, image: IMG(222) },
+    { id: 'soi1', name: 'ข้าวซอยไก่', price: 65, image: IMG(111) },
   ],
   soda: [
     { id: 'red-lime-soda', name: 'แดงมะนาวโซดา', price: 30, image: IMG(23) },
@@ -42,11 +42,11 @@ const products = {
     { id: 'orange-soda', name: 'ส้มโซดา', price: 30, image: IMG(25) },
     { id: 'strawberry-soda', name: 'สตรอเบอร์รี่โซดา', price: 30, image: IMG(30) },
     { id: 'blueberry-soda', name: 'บลูเบอร์รี่โซดา', price: 30, image: IMG(21) },
-    { id: 'strawberry-yogurt', name: 'สตรอเบอร์รี่โยเกิร์ต', price: 30, image: IMG(16) },
-    { id: 'orange-yogurt', name: 'ส้มโยเกิร์ต', price: 30, image: IMG(17) },
-    { id: 'mango-yogurt', name: 'มะม่วงโยเกิร์ต', price: 30, image: IMG(18) },
-    { id: 'pineapple-yogurt', name: 'สับปะรดโยเกิร์ต', price: 30, image: IMG(19) },
-    { id: 'mix-berry-yogurt', name: 'มิกซ์เบอร์รี่โยเกิร์ต', price: 30, image: IMG(20) },
+    { id: 'strawberry-yogurt', name: 'สตรอเบอร์รี่โยเกิร์ต', price: 55, image: IMG(16) },
+    { id: 'orange-yogurt', name: 'ส้มโยเกิร์ต', price: 55, image: IMG(17) },
+    { id: 'mango-yogurt', name: 'มะม่วงโยเกิร์ต', price: 55, image: IMG(18) },
+    { id: 'pineapple-yogurt', name: 'สับปะรดโยเกิร์ต', price: 55, image: IMG(19) },
+    { id: 'mix-berry-yogurt', name: 'มิกซ์เบอร์รี่โยเกิร์ต', price: 55, image: IMG(20) },
   ],
 };
 const OPTIONS = {
