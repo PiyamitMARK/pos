@@ -32,22 +32,27 @@
 
 <div class="options-bar">
 
-  <div>
-    <span>ประเภท:</span>
-    <button type="button" onclick="setTemp('ร้อน')">ร้อน</button>
-    <button type="button" onclick="setTemp('เย็น')">เย็น</button>
-    <button type="button" onclick="setTemp('ปั่น')">ปั่น</button>
+  <div class="options-group">
+    <div class="options-label">ประเภท:</div>
+
+    <button class="option-btn temp-btn active" data-temp="เย็น">เย็น</button>
+    <button class="option-btn temp-btn" data-temp="ร้อน">ร้อน</button>
+    <button class="option-btn temp-btn" data-temp="ปั่น">ปั่น</button>
+
   </div>
 
-  <div>
-    <span>ความหวาน:</span>
-    <button type="button" onclick="setSweet('ไม่หวาน')">ไม่หวาน</button>
-    <button type="button" onclick="setSweet('หวานน้อย')">หวานน้อย</button>
-    <button type="button" onclick="setSweet('หวานปกติ')">หวานปกติ</button>
-    <button type="button" onclick="setSweet('หวานมาก')">หวานมาก</button>
+  <div class="options-group">
+    <div class="options-label">หวาน:</div>
+
+    <button class="option-btn sweet-btn" data-sweet="ไม่หวาน">ไม่หวาน</button>
+    <button class="option-btn sweet-btn" data-sweet="หวานน้อย">หวานน้อย</button>
+    <button class="option-btn sweet-btn active" data-sweet="หวานปกติ">หวานปกติ</button>
+    <button class="option-btn sweet-btn" data-sweet="หวานมาก">หวานมาก</button>
+
   </div>
 
 </div>
+
         <div class="products-grid" id="productsGrid">
           <!-- Products injected by JS -->
         </div>
