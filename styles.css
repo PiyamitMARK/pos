@@ -192,6 +192,49 @@ body {
   box-shadow: -4px 0 16px var(--shadow);
 }
 
+.options-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.options-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.options-label {
+  min-width: 60px;
+  font-weight: 600;
+}
+
+.option-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.option-btn:hover {
+  border-color: #1890ff;
+  color: #1890ff;
+}
+
+.option-btn.active {
+  background: #1890ff;
+  color: white;
+  border-color: #1890ff;
+}
+
+
 .cart-header {
   display: flex;
   align-items: center;
