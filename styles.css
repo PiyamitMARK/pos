@@ -224,14 +224,14 @@ body {
 }
 
 .option-btn:hover {
-  border-color: #1890ff;
-  color: #1890ff;
+  border-color: #4a3728;
+  color: #4a3728;
 }
 
 .option-btn.active {
-  background: #1890ff;
+  background: #4a3728;
   color: white;
-  border-color: #1890ff;
+  border-color: #4a3728;
 }
 
 
