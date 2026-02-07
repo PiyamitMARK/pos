@@ -263,6 +263,14 @@ function completeOrder() {
   openConfirmOrderModal();
 }
 
+function setTemp(temp) {
+  selectedTemp = temp;
+}
+
+function setSweet(sweet) {
+  selectedSweet = sweet;
+}
+
 function newOrder() {
   orderNumber += 1;
   orderNumberEl.textContent = orderNumber;
