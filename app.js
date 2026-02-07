@@ -126,6 +126,7 @@ function renderProducts() {
 }
 
 function addToCart({ id, name, price, image }) {
+
   const numPrice = parseFloat(price);
 
   const existing = cart.find((i) =>
@@ -135,20 +136,25 @@ function addToCart({ id, name, price, image }) {
   );
 
   if (existing) {
-    existing.qty += 1;
+
+    existing.qty++;
+
   } else {
+
     cart.push({
       id,
       name,
       price: numPrice,
       qty: 1,
-      image: image || '',
+      image,
       temp: selectedTemp,
       sweet: selectedSweet
     });
+
   }
 
   renderCart();
+
 }
 
 function removeFromCart(index) {
@@ -176,9 +182,9 @@ function renderCart() {
       <div class="cart-item-info">
         <div class="cart-item-name">
   ${item.name}
-  <div class="cart-item-options">
-    ${item.temp}, ${item.sweet}
-  </div>
+  <br>
+  <small>${item.temp}, ${item.sweet}</small>
+</div>
 </div>
         <div class="cart-item-price">${formatMoney(item.price)} × ${item.qty}</div>
       </div>
