@@ -130,33 +130,22 @@ function addToCart({ id, name, price, image }) {
 
   const numPrice = parseFloat(price);
 
-  const existing = cart.find((i) =>
-    i.id === id &&
-    i.temp === selectedTemp &&
-    i.sweet === selectedSweet
-  );
+  cart.push({
+    id,
+    name,
+    price: numPrice,
+    qty: 1,
+    image,
+    temp: selectedTemp,
+    sweet: selectedSweet
+  });
 
-  if (existing) {
-
-    existing.qty++;
-
-  } else {
-
-    cart.push({
-      id,
-      name,
-      price: numPrice,
-      qty: 1,
-      image,
-      temp: selectedTemp,
-      sweet: selectedSweet
-    });
-
-  }
+  selectedCartIndex = cart.length - 1;
 
   renderCart();
 
 }
+
 
 function removeFromCart(index) {
   cart.splice(index, 1);
