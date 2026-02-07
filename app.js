@@ -240,7 +240,13 @@ function saveOrder() {
   const order = {
     orderNumber,
     date: new Date().toISOString(),
-    items: cart.map((i) => ({ name: i.name, price: i.price, qty: i.qty })),
+    items: cart.map((i) => ({
+  name: i.name,
+  price: i.price,
+  qty: i.qty,
+  temp: i.temp,
+  sweet: i.sweet
+})),
     total,
     status: 'pending', // รอจ่าย → จ่ายแล้ว ใน Admin
   };
