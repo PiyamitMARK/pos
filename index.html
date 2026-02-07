@@ -30,6 +30,24 @@
           <button class="category-btn" data-category="kaosoi">ข้าวซอย</button>
         </nav>
 
+<div class="options-bar">
+
+  <div>
+    <strong>ประเภท:</strong>
+    <button onclick="setTemp('ร้อน')">ร้อน</button>
+    <button onclick="setTemp('เย็น')">เย็น</button>
+    <button onclick="setTemp('ปั่น')">ปั่น</button>
+  </div>
+
+  <div>
+    <strong>ความหวาน:</strong>
+    <button onclick="setSweet('ไม่หวาน')">ไม่หวาน</button>
+    <button onclick="setSweet('หวานน้อย')">หวานน้อย</button>
+    <button onclick="setSweet('หวานปกติ')">หวานปกติ</button>
+    <button onclick="setSweet('หวานมาก')">หวานมาก</button>
+  </div>
+
+</div>
         <div class="products-grid" id="productsGrid">
           <!-- Products injected by JS -->
         </div>
