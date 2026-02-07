@@ -163,7 +163,12 @@ function renderOrders() {
           ${order.items
             .map(
               (i) =>
-                `<li class="order-item"><span>${i.name} × ${i.qty}</span><span>${formatMoney(i.price * i.qty)}</span></li>`
+                `<li class="order-item"><span>
+    ${i.name}
+    ${i.temp ? `<br><small>${i.temp}, ${i.sweet}</small>` : ""}
+    × ${i.qty}
+  </span>
+  <span>${formatMoney(i.price * i.qty)}</span></li>`
             )
             .join('')}
         </ul>
@@ -338,3 +343,4 @@ clearDataModal.addEventListener('click', (e) => {
 });
 
 checkAuth();
+
