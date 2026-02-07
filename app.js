@@ -59,6 +59,7 @@ let orderNumber = 1001;
 let currentCategory = 'coffee';
 let selectedTemp = "เย็น";
 let selectedSweet = "หวานปกติ";
+let selectedCartIndex = null;
 
 function setTemp(temp) {
   selectedTemp = temp;
