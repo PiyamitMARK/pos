@@ -403,6 +403,19 @@ body {
   transition: background 0.2s;
 }
 
+.btn-delete {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.btn-delete:hover {
+  background: #d9363e;
+}
+
 .btn-paid:hover {
   background: var(--brown-light);
 }
@@ -569,3 +582,4 @@ body {
   color: var(--brown);
   font-weight: 500;
 }
+
