@@ -373,3 +373,51 @@ if (lastOrderDate !== today) {
 setDate();
 renderProducts();
 renderCart();
+
+
+// ===== OPTIONS SYSTEM =====
+
+function updateSelectedItem() {
+
+  if (selectedCartIndex === null) return;
+
+  cart[selectedCartIndex].temp = selectedTemp;
+  cart[selectedCartIndex].sweet = selectedSweet;
+
+  renderCart();
+
+}
+
+document.querySelectorAll(".temp-btn").forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+    document.querySelectorAll(".temp-btn")
+      .forEach(b => b.classList.remove("active"));
+
+    btn.classList.add("active");
+
+    selectedTemp = btn.dataset.temp;
+
+    updateSelectedItem();
+
+  });
+
+});
+
+document.querySelectorAll(".sweet-btn").forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+    document.querySelectorAll(".sweet-btn")
+      .forEach(b => b.classList.remove("active"));
+
+    btn.classList.add("active");
+
+    selectedSweet = btn.dataset.sweet;
+
+    updateSelectedItem();
+
+  });
+
+});
