@@ -146,6 +146,16 @@ function addToCart({ id, name, price, image }) {
 
 }
 
+function updateSelectedItem() {
+
+  if (selectedCartIndex === null) return;
+
+  cart[selectedCartIndex].temp = selectedTemp;
+  cart[selectedCartIndex].sweet = selectedSweet;
+
+  renderCart();
+
+}
 
 function removeFromCart(index) {
   cart.splice(index, 1);
