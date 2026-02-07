@@ -155,7 +155,10 @@ function renderOrders() {
         </div>
         <div class="order-card-header-row">
           <span class="order-card-date">${formatDate(order.date)}</span>
-          ${isPending ? `<button type="button" class="btn-paid" data-order-number="${order.orderNumber}">จ่ายแล้ว</button>` : ''}
+          <div class="order-actions">
+  ${isPending ? `<button type="button" class="btn-paid" data-order-number="${order.orderNumber}">จ่ายแล้ว</button>` : ''}
+  <button type="button" class="btn-delete" data-order-number="${order.orderNumber}">ลบ</button>
+</div>
         </div>
       </div>
       <div class="order-card-body">
@@ -188,6 +191,33 @@ function renderOrders() {
       markOrderAsPaid(num);
     });
   });
+  ordersList.querySelectorAll('.btn-delete').forEach((btn) => {
+
+  btn.addEventListener('click', () => {
+
+    const num = parseInt(btn.dataset.orderNumber, 10);
+
+    deleteOrder(num);
+
+  });
+
+});
+}
+
+function deleteOrder(orderNumber) {
+
+  if (!confirm(`ลบออเดอร์ #${orderNumber} ?`)) return;
+
+  const orders = loadOrders();
+
+  const newOrders = orders.filter(o => o.orderNumber !== orderNumber);
+
+  saveOrders(newOrders);
+
+  renderDailySummary();
+  renderOrders();
+  renderHistory();
+
 }
 
 function renderHistory() {
@@ -343,4 +373,5 @@ clearDataModal.addEventListener('click', (e) => {
 });
 
 checkAuth();
+
 
