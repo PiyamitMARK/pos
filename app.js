@@ -25,11 +25,11 @@ const products = {
     { id: 'green-tea', name: 'ชาเขียว', price: 30, image: IMG(10) },
     { id: 'black-tea', name: 'ชาดำเย็น', price: 30, image: IMG(5) },
     { id: 'lemon-tea', name: 'ชามะนาว', price: 30, image: IMG(13) },
-    { id: 'coconut', name: 'มะพร้าวปั่น', price: 40, image: IMG(222) },
   ],
   milk: [
     { id: 'pink-milk', name: 'นมชมพู', price: 35, image: IMG(14) },
     { id: 'cocoa', name: 'โกโก้', price: 45, image: IMG(9) },
+    { id: 'coconut', name: 'มะพร้าวปั่น', price: 40, image: IMG(222) },
   ],
   kaosoi: [
     { id: 'soi2', name: 'ข้าวซอยหมู', price: 75, image: IMG(222) },
