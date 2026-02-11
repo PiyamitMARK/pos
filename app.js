@@ -34,6 +34,7 @@ const products = {
   kaosoi: [
     { id: 'soi2', name: 'ข้าวซอยหมู', price: 75, image: IMG(222) },
     { id: 'soi1', name: 'ข้าวซอยไก่', price: 65, image: IMG(111) },
+    { id: 'soi3', name: 'น้ำเงี้ยว', price: 55, image: IMG(555) },
   ],
   soda: [
     { id: 'red-lime-soda', name: 'แดงมะนาวโซดา', price: 30, image: IMG(23) },
