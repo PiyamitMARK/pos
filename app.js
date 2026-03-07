@@ -37,6 +37,8 @@ const products = {
     { id: 'soi3', name: 'น้ำเงี้ยว', price: 55, image: IMG(555) },
   ],
   soda: [
+    { id: 'pepsi', name: 'เป็ปซี่', price: 10, image: IMG(80) },
+    { id: 'water', name: 'น้ำเปล่า', price: 10, image: IMG(60) }, 
     { id: 'red-lime-soda', name: 'แดงมะนาวโซดา', price: 35, image: IMG(23) },
     { id: 'blue-hawaii-soda', name: 'บลูฮาวายมะนาวโซดา', price: 35, image: IMG(26) },
     { id: 'honey-lime-soda', name: 'น้ำผึ้งมะนาวโซดา', price: 35, image: IMG(27) },
