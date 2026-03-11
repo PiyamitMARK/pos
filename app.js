@@ -29,7 +29,7 @@ const products = {
   milk: [
     { id: 'pink-milk', name: 'นมชมพู', price: 40, image: IMG(14) },
     { id: 'cocoa', name: 'โกโก้', price: 40, image: IMG(9) },
-    { id: 'coconut', name: 'มะพร้าวปั่น', price: 40, image: IMG(333) },
+    { id: 'coconut', name: 'มะพร้าวปั่น', price: 45, image: IMG(333) },
   ],
   kaosoi: [
     { id: 'soi2', name: 'ข้าวซอยหมู', price: 75, image: IMG(222) },
@@ -37,7 +37,7 @@ const products = {
     { id: 'soi3', name: 'น้ำเงี้ยว', price: 55, image: IMG(555) },
   ],
   soda: [
-    { id: 'pepsi', name: 'เป็ปซี่', price: 10, image: IMG(80) },
+    { id: 'pepsi', name: 'เป็ปซี่', price: 15, image: IMG(80) },
     { id: 'water', name: 'น้ำเปล่า', price: 10, image: IMG(60) }, 
     { id: 'red-lime-soda', name: 'แดงมะนาวโซดา', price: 35, image: IMG(23) },
     { id: 'blue-hawaii-soda', name: 'บลูฮาวายมะนาวโซดา', price: 35, image: IMG(26) },
