@@ -18,7 +18,7 @@ const products = {
     { id: 'orange-americano', name: 'อเมริกาโน่ส้ม', price: 60, image: IMG(8) },
     { id: 'pure-matcha', name: 'เพียวมัทฉะ', price: 55, image: IMG(2) },
     { id: 'matcha-latte', name: 'มัทฉะลาเต้', price: 60, image: IMG(3) },
-    { id: 'coconut-matcha-latte', name: 'มัทฉะมะพร้าว', price: 60, image: IMG(15) },
+    { id: 'coconut-matcha', name: 'มัทฉะมะพร้าว', price: 60, image: IMG(15) },
   ],
   tea: [
     { id: 'thai-tea', name: 'ชาไทย', price: 40, image: IMG(1) },
@@ -33,7 +33,6 @@ const products = {
   ],
   kaosoi: [
     { id: 'soi4', name: 'ข้าวซอยเนื้อ', price: 85, image: IMG(2223) },
-    { id: 'soi2', name: 'ข้าวซอยหมู', price: 75, image: IMG(222) },
     { id: 'soi1', name: 'ข้าวซอยไก่', price: 65, image: IMG(111) },
     { id: 'soi3', name: 'น้ำเงี้ยว', price: 55, image: IMG(555) },
   ],
